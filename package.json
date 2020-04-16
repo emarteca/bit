@@ -15,7 +15,7 @@
     "lint-circle": "eslint \"{src,e2e}/**/*.ts\" --format junit -o junit/eslint-results.xml",
     "format": "prettier-eslint \"{src,e2e}/**/*.ts\" --write",
     "prettier:check": "prettier --list-different \"{src,e2e}/**/*.ts\"",
-    "test": "mocha --require ./babel-register './src/**/*.spec.ts'",
+    "test": "mocha --file unit-error-hack.js --require ./babel-register './src/**/*.spec.ts' --reporter mocha-junit-reporter",
     "test:appveyor": "mocha --require ./babel-register --reporter mocha-appveyor-reporter ./src/**/*.spec.ts",
     "test-circle": "mocha --require ./babel-register --reporter mocha-circleci-reporter './src/**/*.spec.ts'",
     "mocha-circleci": "mocha --require ./babel-register --reporter mocha-circleci-reporter",
