@@ -1,0 +1,13 @@
+ConsumerComponent fromString() component with compiler should not crash and return a ConsumerComponent Object
+ConsumerComponent fromString() component with compiler should convert the compiler object to a Compiler instance
+DependencyFileLinkGenerator generate() using plain javascript should generate linkPath that consist of component rootDir + sourceRelativePath
+DependencyFileLinkGenerator generate() using plain javascript should generate linkContent that points to the package
+DependencyFileLinkGenerator generate() using plain javascript should set isEs6 to false as it does not have ImportSpecifiers
+"DependencyFileLinkGenerator generate() using ES6 when dist is inside the component dir should generate two link files, one for the source and one for the dist"
+"DependencyFileLinkGenerator generate() using ES6 when dist is outside the component dir should generate two link files, one for the source and one for the dist"
+DependencyFileLinkGenerator generate() using custom resolved modules with ES6 when dist is inside the component dir should generate one link file because it is stored in node_modules which is shared between the src and the dist
+DependencyFileLinkGenerator generate() using custom resolved modules with ES6 when dist is inside the component dir should generate linkPath that consist of component rootDir + node_modules + importSource (stored in relativePaths) + index.js
+DependencyFileLinkGenerator generate() using custom resolved modules with ES6 when dist is inside the component dir should generate linkContent that points to the package
+"DependencyFileLinkGenerator generate() using custom resolved modules with ES6 when dist is outside the component dir should generate two link files, one for the source and one for the dist"
+DependencyFileLinkGenerator generate() using sass files should generate linkPath that consist of component rootDir + sourceRelativePath
+DependencyFileLinkGenerator generate() using sass files should generate linkContent that points to the main file inside the package

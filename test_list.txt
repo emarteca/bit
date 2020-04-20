@@ -1,0 +1,2 @@
+/home/ellen/Documents/ASJProj/TESTING_reordering/bit/src/consumer/component/consumer-component.spec.ts
+/home/ellen/Documents/ASJProj/TESTING_reordering/bit/src/links/dependency-file-link-generator.spec.ts
